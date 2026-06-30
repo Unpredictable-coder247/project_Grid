@@ -1,0 +1,112 @@
+.container{display: grid;
+           grid-template-columns: 2fr 1fr;
+           gap: 20px;
+           max-width: 1200px;
+           margin: auto;
+           grid-template-areas: "header header"
+                                "featured sidebar"
+                                "advert sidebar"
+                                "cards cards"
+                                "footer footer";}
+
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body{font-family: "Quicksand", sans-serif;
+     background: #f9f9f9;
+     color: #333;
+     padding: 20px;
+     line-height: 1.6;}
+
+h1,h2,h3{font-family: "Merriweather", serif;}
+
+/*Header Section*/
+.header{grid-area: header;
+        background-color: #1e3a5f;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;}
+
+.header h1{font-size: 2.3rem;
+           margin-bottom: 20px;
+           color: #ffd166;}
+
+.nav-links{display: flex;
+           list-style: none;
+           gap: 20px;
+           margin-top: 15px;}
+
+.nav-links a{text-decoration: none;
+             color: white;
+             font-weight: bold;
+             transition: .3s;}
+
+.nav-links a:hover{color: #f4a261;}
+
+/*Featured*/
+.featured{grid-area: featured;
+          background: #ffffff;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0px 8px 20px rgba(0,0,0,0.08) ;}
+
+.featured h2{color: #1e3a5f;
+             font-size: 2rem;
+             margin-bottom: 15px;}
+
+.featured p{font-size: 1rem;
+            color: #555;}
+
+.featured p span{color: #ffd166;}
+
+/*Sidebar*/
+.sidebar{grid-area: sidebar;
+         display: grid;
+         gap: 20px;}
+
+.small{background-color: white;
+      padding: 20px;
+      border-radius: 15px;}
+
+.small h3{color: #1e3a5f;
+         margin-bottom: 10px;}
+
+.small p{color: #666;}
+
+/*Advertisement*/
+.advert{grid-area: advert;
+        background: #f4a261;
+        color:#1e3a5f;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;}
+
+.advert h2{margin-bottom: 10px;
+          font-family: "Merriweather", serif;}
+
+.advert p{font-size: 1.1rem;
+          font-weight: 600;}
+
+/*Card Section*/
+.cards{grid-area: cards;
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+       gap: 20px;}
+
+.card{background: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;}
+
+.card:hover{transform: translateY(-5px);
+             color: #f4a261;}
+
+/*Footer*/
+.footer{grid-area: footer;
+        background: #1e3a5f;
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;}
